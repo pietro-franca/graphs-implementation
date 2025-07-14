@@ -1,58 +1,59 @@
 # Graphs Implementation
 
-O programa tem como objetivo implementar em C alguns dos principais conceitos e algoritmos da Teoria dos Grafos, uma estrutura de dados bastante conhecida no meio computacional.
+This program aims to implement, in C, some of the core concepts and algorithms from Graph Theory — a well-known data structure in computer science.
 
-## Representação
+## Representation
 
-A representação de grafos pode ser dada de diversas formas, como em matrizes e listas encadeadas. Neste caso em específico, vamos utilizar a chamada Matriz de Adjacências.
+Graphs can be represented in several ways, such as matrices and linked lists. In this case, we use the **Adjacency Matrix** representation.
 
-<img src="./assets/matriz-adj-grafos.png" width="400" height="280">
+<img src="./assets/adjacency-matrix.png" width="600" height="280">
 
-Aqui, ela é construída a partir da leitura de um arquivo de texto, ou digitação do usuário, contendo as seguintes informações:
+The adjacency matrix is built from either a text file or manual user input, containing the following information:
 
-**Primeira linha:**
+**First line:**
 
-    [num_vertices]  [num_arestas]  [tipo]  [valorado]
+    [num_vertices]  [num_edges]  [type]  [weighted]
 
-**Linhas seguintes:**
 
-Para cada aresta ou arco **{vi, vj}**, incluir uma linha no formato:
+**Subsequent lines:**
 
-    [vi]  [vj]  [peso]
+For each edge or arc **{vi, vj}**, add a line in the format:
 
-#### Observações:
+    [vi]  [vj]  [weight]
 
-- **[tipo]**: Indica o tipo do grafo. Use G para grafos não dirigidos e D para grafos dirigidos.
-- **[valorado]**: Use 1 para grafos valorados e 0 para grafos não valorados.
-- **[peso]**: Este campo é opcional e só estará presente em grafos ponderados.
-- Arestas ou arcos paralelos podem aparecer mais de uma vez no arquivo.
+#### Notes:
 
-## Algoritmos implementados
+- **[type]**: Indicates the graph type. Use `G` for undirected graphs and `D` for directed graphs.
+- **[weighted]**: Use `1` for weighted graphs and `0` for unweighted graphs.
+- **[weight]**: This field is optional and only included for weighted graphs.
+- Parallel edges or arcs may appear multiple times in the file.
 
-- Cálculo do grau de cada vértice
-- Árvore Geradora Mínima - Algoritmo de Prim
-- Caminho mais curto - Algoritmo de Dijkstra
-- Busca em Largura
-- Busca em Profundidade
+## Implemented Algorithms
 
-## Testes
+- Vertex degree calculation  
+- Minimum Spanning Tree – Prim’s Algorithm  
+- Shortest Path – Dijkstra’s Algorithm  
+- Breadth-First Search (BFS)  
+- Depth-First Search (DFS)  
 
-### Teste 1
+## Tests
+
+### Test 1
 
 <img src="./assets/teste1-grafos.png" width="570" height="380">
 
-### Teste 2
+### Test 2
 
 <img src="./assets/teste2-grafos.png" width="570" height="380">
 
-### Teste 3
+### Test 3
 
 <img src="./assets/teste3-grafos.png" width="570" height="380">
 
-### Teste 4
+### Test 4
 
 <img src="./assets/teste4-grafos.png" width="570" height="380">
 
-### Teste 5
+### Test 5
 
 <img src="./assets/teste5-grafos.png" width="570" height="380">
